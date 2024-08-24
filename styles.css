@@ -1,0 +1,189 @@
+/* Variables de colores */
+:root {
+    --color-principal: #6A0DAD; /* Morado principal */
+    --color-fondo: #FFFFFF; /* Fondo blanco */
+    --color-texto: #333333; /* Texto principal en gris oscuro */
+    --color-gris-medio: #666666; /* Gris medio para subtítulos */
+    --color-gris-claro: #999999; /* Gris claro para texto secundario */
+    --fuente-principal: 'Montserrat', sans-serif;
+}
+
+/* Estilos generales del header */
+header {
+    position: sticky;
+    top: 10px; /* Espacio en la parte superior del header */
+    background-color: var(--color-fondo);
+    z-index: 1000; /* Asegura que el header se mantenga encima del contenido */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del nav */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Efectos de los enlaces */
+nav ul li a:hover {
+    color: var(--color-principal);
+    border-bottom: 2px solid var(--color-principal);
+}
+
+/* Efecto para el enlace activo cuando se hace scroll */
+nav ul li a.active {
+    color: var(--color-principal);
+    border-bottom: 2px solid var(--color-principal);
+}
+
+/* Estilos generales */
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+/* Estilos de los encabezados */
+h1, h2, h3 {
+    color: var(--color-texto);
+    margin-bottom: 1rem;
+}
+
+/* Escala de grises para encabezados */
+h1 {
+    font-size: 2.5rem;
+    color: var(--color-texto); /* Gris oscuro */
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--color-gris-medio); /* Gris medio */
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--color-gris-claro); /* Gris claro */
+}
+
+/* Estilos de la sección de proyectos */
+#proyectos {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#proyectos h2 {
+    color: var(--color-principal);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Grid para los proyectos */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Estilos para cada proyecto */
+.proyecto {
+    background-color: var(--color-principal);
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Estilos para la imagen dentro de cada proyecto */
+.proyecto img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Limita la altura para mantener un diseño consistente */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Ajustes de texto en los proyectos */
+.proyecto h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-fondo);
+}
+
+.proyecto p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--color-fondo);
+}
+
+/* Efecto hover en los proyectos */
+.proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.proyecto a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.proyecto a:hover {
+    color: #d4a1f4; /* Un tono más claro de morado */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .proyecto h3 {
+        font-size: 1.5rem;
+    }
+
+    .proyecto p {
+        font-size: 1rem;
+    }
+
+    .proyecto img {
+        max-height: 150px; /* Ajusta la altura de la imagen en pantallas más pequeñas */
+    }
+}
+
+
+/* Estilos para el texto general */
+p {
+    font-size: 1rem;
+    color: var(--color-gris-medio); /* Texto en gris medio */
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--color-principal);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-gris-claro); /* Cambiar a gris claro en hover */
+}
