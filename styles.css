@@ -1,31 +1,48 @@
 /* Variables de colores */
 :root {
-    --color-principal: #6A0DAD; /* Morado principal */
-    --color-fondo: #FFFFFF; /* Fondo blanco */
-    --color-texto: #333333; /* Texto principal en gris oscuro */
-    --color-gris-medio: #666666; /* Gris medio para subtítulos */
-    --color-gris-claro: #999999; /* Gris claro para texto secundario */
+    --color-principal: #6A0DAD;
+    /* Morado principal */
+    --color-fondo: #FFFFFF;
+    /* Fondo blanco */
+    --color-texto: #333333;
+    /* Texto principal en gris oscuro */
+    --color-gris-medio: #666666;
+    /* Gris medio para subtítulos */
+    --color-gris-claro: #999999;
+    /* Gris claro para texto secundario */
     --fuente-principal: 'Montserrat', sans-serif;
 }
 
-/* Estilos generales del header */
-header {
-    position: sticky;
-    top: 10px; /* Espacio en la parte superior del header */
-    background-color: var(--color-fondo);
-    z-index: 1000; /* Asegura que el header se mantenga encima del contenido */
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Estilos del nav */
+/* Header general */
+header {
+    position: sticky;
+    top: 0;
+    max-width: 440px;
+    width: 100%;
+    margin: 10px auto;
+    border-radius: 10px;
+    background-color: var(--color-fondo);
+    padding: 10px 0;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Nav dentro del header */
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 nav ul li {
@@ -36,20 +53,41 @@ nav ul li a {
     text-decoration: none;
     color: var(--color-texto);
     font-size: 1.2rem;
-    padding: 10px 15px;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding: 3px 3px;
+    transition: color 0.3s ease;
 }
 
-/* Efectos de los enlaces */
+/* Efecto hover en los enlaces */
 nav ul li a:hover {
     color: var(--color-principal);
-    border-bottom: 2px solid var(--color-principal);
 }
 
-/* Efecto para el enlace activo cuando se hace scroll */
+/* Efecto para el enlace activo */
 nav ul li a.active {
     color: var(--color-principal);
     border-bottom: 2px solid var(--color-principal);
+}
+
+/* Clases de colores dinámicos para el header */
+.header-seccion1 {
+    background-color: #6A0DAD;
+    /* Morado */
+    color: #fff;
+    /* Blanco */
+}
+
+.header-seccion2 {
+    background-color: #333333;
+    /* Gris oscuro */
+    color: #fff;
+    /* Blanco */
+}
+
+.header-seccion3 {
+    background-color: #FFFFFF;
+    /* Blanco */
+    color: #333333;
+    /* Gris oscuro */
 }
 
 /* Estilos generales */
@@ -64,7 +102,10 @@ body {
 }
 
 /* Estilos de los encabezados */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
+    text-align: center;
     color: var(--color-texto);
     margin-bottom: 1rem;
 }
@@ -72,17 +113,20 @@ h1, h2, h3 {
 /* Escala de grises para encabezados */
 h1 {
     font-size: 2.5rem;
-    color: var(--color-texto); /* Gris oscuro */
+    color: var(--color-texto);
+    /* Gris oscuro */
 }
 
 h2 {
     font-size: 2rem;
-    color: var(--color-gris-medio); /* Gris medio */
+    color: var(--color-gris-medio);
+    /* Gris medio */
 }
 
 h3 {
     font-size: 1.5rem;
-    color: var(--color-gris-claro); /* Gris claro */
+    color: var(--color-gris-claro);
+    /* Gris claro */
 }
 
 /* Estilos de la sección de proyectos */
@@ -120,7 +164,8 @@ h3 {
 .proyecto img {
     width: 100%;
     height: auto;
-    max-height: 200px; /* Limita la altura para mantener un diseño consistente */
+    max-height: 200px;
+    /* Limita la altura para mantener un diseño consistente */
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1rem;
@@ -152,7 +197,94 @@ h3 {
 }
 
 .proyecto a:hover {
-    color: #d4a1f4; /* Un tono más claro de morado */
+    color: #d4a1f4;
+    /* Un tono más claro de morado */
+}
+
+/* Estilos para el texto general */
+p {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-gris-medio);
+    /* Texto en gris medio */
+    margin-bottom: 1rem;
+}
+
+/* .btnProyecto{
+width: 200px;
+border: 1px solid var(--color-gris-claro);
+border-radius: 10px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+margin: auto;
+display: flex;
+justify-content: center;
+}
+
+#btn-proyecto {
+    color: var(--color-principal);
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    transition: color 0.3s ease;
+}
+
+#btn-proyecto:hover {
+    color: var(--color-gris-claro);
+    /* Cambiar a gris claro en hover */
+/* } */
+*/ .btnProyecto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    /* Puedes ajustar esta altura según necesites */
+    text-align: center;
+    background-color: #f0f0f0;
+    /* Color de fondo opcional */
+}
+
+.enlace-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    /* Quita el subrayado del enlace */
+}
+
+/* Aplica los estilos de los botones según corresponda */
+.boton-proyectos {
+    background-color: transparent;
+    color: var(--color-principal);
+    width: 200px;
+    margin: auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 1px solid var(--color-gris-claro);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+    cursor: pointer;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.boton-proyectos:hover {
+    background-color: var(--color-principal);
+    color: #fff;
+}
+
+.boton-proyectos:active {
+    background-color: #5A0CA4;
+    color: #fff;
+}
+
+
+
+
+
+
+#destacar {
+    color: var(--color-principal);
+
 }
 
 /* Media query para dispositivos móviles */
@@ -166,24 +298,19 @@ h3 {
     }
 
     .proyecto img {
-        max-height: 150px; /* Ajusta la altura de la imagen en pantallas más pequeñas */
+        max-height: 150px;
+        /* Ajusta la altura de la imagen en pantallas más pequeñas */
     }
-}
 
+    nav ul {
+        gap: 10px;
+    }
 
-/* Estilos para el texto general */
-p {
-    font-size: 1rem;
-    color: var(--color-gris-medio); /* Texto en gris medio */
-    margin-bottom: 1rem;
-}
+    nav ul li a {
+        font-size: 1rem;
+    }
 
-a {
-    color: var(--color-principal);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: var(--color-gris-claro); /* Cambiar a gris claro en hover */
+    h1 {
+        font-size: 2rem;
+    }
 }
