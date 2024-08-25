@@ -1,16 +1,19 @@
 /* Variables de colores */
 :root {
-    --color-principal: #6A0DAD;
-    /* Morado principal */
-    --color-fondo: #FFFFFF;
-    /* Fondo blanco */
-    --color-texto: #333333;
-    /* Texto principal en gris oscuro */
-    --color-gris-medio: #666666;
-    /* Gris medio para subtítulos */
-    --color-gris-claro: #999999;
-    /* Gris claro para texto secundario */
+    --color-principal: #6A0DAD; /* Morado principal */
+    --color-fondo: #F0F0F0; /* Fondo blanco */
+    --color-texto: #333333; /* Texto principal en gris oscuro */
+    --color-gris-medio: #666666; /* Gris medio para subtítulos */
+    --color-gris-claro: #999999; /* Gris claro para texto secundario */
     --fuente-principal: 'Montserrat', sans-serif;
+}
+
+.dark-mode {
+    --color-principal:white ; /* Morado suave para modo oscuro */
+    --color-fondo: #3c0861; /* Fondo casi negro */
+    --color-texto: #e0e0e0d5; /* Texto gris claro */
+    --color-gris-medio: #9E9E9E; /* Gris medio */
+    --color-gris-claro: #BDBDBD; /* Gris claro */
 }
 
 * {
@@ -27,7 +30,8 @@ header {
     width: 100%;
     margin: 10px auto;
     border-radius: 10px;
-    background-color: var(--color-fondo);
+    background-color: rgba(252, 252, 252, 0.774) ;
+    backdrop-filter: blur(10px);
     padding: 10px 0;
     z-index: 2;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -152,11 +156,11 @@ h3 {
 /* Estilos para cada proyecto */
 .proyecto {
     background-color: var(--color-principal);
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 1.3rem;
+    border-radius: 10px;
     color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 8px 1px var(--color-gris-medio);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     text-align: center;
 }
 
@@ -167,7 +171,7 @@ h3 {
     max-height: 200px;
     /* Limita la altura para mantener un diseño consistente */
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-bottom: 1rem;
 }
 
@@ -187,11 +191,12 @@ h3 {
 /* Efecto hover en los proyectos */
 .proyecto:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px var(--color-gris-medio);
+
 }
 
 .proyecto a {
-    color: #fff;
+    color: var(--color-fondo);
     text-decoration: underline;
     transition: color 0.3s ease;
 }
@@ -209,29 +214,6 @@ p {
     /* Texto en gris medio */
     margin-bottom: 1rem;
 }
-
-/* .btnProyecto{
-width: 200px;
-border: 1px solid var(--color-gris-claro);
-border-radius: 10px;
-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-margin: auto;
-display: flex;
-justify-content: center;
-}
-
-#btn-proyecto {
-    color: var(--color-principal);
-    text-decoration: none;
-    border: none;
-    background-color: transparent;
-    transition: color 0.3s ease;
-}
-
-#btn-proyecto:hover {
-    color: var(--color-gris-claro);
-    /* Cambiar a gris claro en hover */
-/* } */
 */ .btnProyecto {
     display: flex;
     justify-content: center;
@@ -277,9 +259,18 @@ justify-content: center;
     color: #fff;
 }
 
+button#toggle-dark-mode {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--color-texto);
+    transition: color 0.3s ease;
+}
 
-
-
+button#toggle-dark-mode:hover {
+    color: var(--color-principal);
+}
 
 
 #destacar {
@@ -312,5 +303,13 @@ justify-content: center;
 
     h1 {
         font-size: 2rem;
+    }
+}
+@media (max-width: 390px){
+    nav ul li a{
+        font-size: 0.7rem;
+    }
+    button#toggle-dark-mode{
+        font-size: 1rem;
     }
 }

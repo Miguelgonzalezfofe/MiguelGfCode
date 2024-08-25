@@ -53,6 +53,18 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(escribir, isDeleting ? 70 : 80); // Velocidad de escritura y borrado
         }
     }
+
     escribir();
+});
+
+document.getElementById('toggle-dark-mode').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    
+    // Cambiar el ícono del botón según el modo
+    if(document.body.classList.contains('dark-mode')) {
+        this.textContent = '☀️'; // Ícono de sol para modo claro
+    } else {
+        this.textContent = '🌙'; // Ícono de luna para modo oscuro
+    }
 });
 
