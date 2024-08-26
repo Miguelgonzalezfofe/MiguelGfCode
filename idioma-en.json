@@ -1,0 +1,46 @@
+{
+    "header": {
+        "inicio": "Home",
+        "proyectos": "Projects",
+        "sobre_mi": "About Me",
+        "contacto": "Contact",
+        "toggle_dark_mode": "🌙 Switch to Dark Mode"
+    },
+    "hero": {
+        "titulo": "Miguel Gonzalez",
+        "subtitulo": "Web Developer",
+        "descripcion": "Specialized in creating unique websites with HTML, CSS, and JavaScript. Discover my projects and web development skills.",
+        "boton_proyectos": "View Projects"
+    },
+    "proyectos": {
+        "titulo": "Projects",
+        "proyecto1": {
+            "titulo": "E-commerce Granja Delicias",
+            "descripcion": "An online store selling meat products.",
+            "tecnologias": [
+                "html",
+                "css",
+                "JavaScript",
+                "sass"
+            ],
+            "github": "GitHub",
+            "link_proyecto": "Project Link"
+        },
+        "proyecto2": {
+            "titulo": "E-commerce Granja Delicias",
+            "descripcion": "An online store selling meat products.",
+            "tecnologias": [
+                "html",
+                "css",
+                "JavaScript",
+                "sass"
+            ],
+            "github": "GitHub",
+            "link_proyecto": "Project Link"
+        }
+    },
+    "sobre_mi": {
+        "titulo": "About Me"
+    },
+    "footer": {}
+}

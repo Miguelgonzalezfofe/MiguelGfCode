@@ -7,6 +7,7 @@
     <meta name="description"
         content="Portafolio de Miguel, desarrollador web especializado en HTML, CSS y JavaScript. Descubre mis proyectos y habilidades en el desarrollo web.">
     <meta name="keywords" content="desarrollador web, HTML, CSS, JavaScript, portafolio, proyectos, programación">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="author" content="Miguel Gonzalez">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -18,23 +19,28 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a id="inicio" href="#inicio">Inicio</a></li>
+                <li><a id="proyecto" href="#proyectos">Proyectos</a></li>
+                <li><a id="sobre-mi" href="#sobre-mi">Sobre Mí</a></li>
+                <li><a id="contacto" href="#contacto">Contacto</a></li>
                 <button id="toggle-dark-mode" aria-label="Cambiar a modo oscuro">🌙</button>
+                <select id="languageSelector">
+                    <option value="es">Es</option>
+                    <option value="en">En</option>
+                </select>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="inicio">
+
+        <section>
             <div class="hero">
                 <h1>Miguel Gonzalez <br> <span id="destacar">Desarrollador <span id="escribir"> Web</span> </span></h1>
                 <p>Especializado en la creación de sitios web únicos con HTML, CSS y JavaScript. <br> Descubre mis
                     proyectos y habilidades en desarrollo web.</p>
                 <div class="btnProyecto">
                     <a href="#proyectos" class=" enlace-boton boton-proyectos">
-                            Ver Proyectos
+                        Ver Proyectos
                     </a>
                 </div>
             </div>
@@ -43,30 +49,35 @@
             <h2>Proyectos</h2>
             <div class="proyectos-grid">
                 <div class="proyecto">
-                    <img src="https://www.godaddy.com/resources/latam/wp-content/uploads/sites/4/pagina-web.jpg?size=1920x0" alt="Descripción del proyecto 1">
-                    <h3>Proyecto 1</h3>
-                    <p>Descripción breve del proyecto 1.</p>
-                    <a href="#">Ver Proyecto</a>
+                    <img src="https://www.godaddy.com/resources/latam/wp-content/uploads/sites/4/pagina-web.jpg?size=1920x0"
+                        alt="Descripción del proyecto 1">
+                    <h3>E-commerce Granja Delicias</h3>
+                    <p>Es una tienda online de venta de productos cárnicos.</p>
+                    <div class="tecnologias">
+                        <p class="html">html</p>
+                        <p class="css">css</p>
+                        <p class="js">JavaScript</p>
+                        <p class="sass">sass</p>
+                    </div>
+                    <a href="#" class="link_proyecto"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="#" class="link_proyecto"><i class="fa-solid fa-link"></i> Link Proyecto</a>
                 </div>
                 <div class="proyecto">
-                    <img src="https://www.godaddy.com/resources/latam/wp-content/uploads/sites/4/pagina-web.jpg?size=1920x0" alt="Descripción del proyecto 1">
-                    <h3>Proyecto 1</h3>
-                    <p>Descripción breve del proyecto 1.</p>
-                    <a href="#">Ver Proyecto</a>
+                    <img src="https://www.godaddy.com/resources/latam/wp-content/uploads/sites/4/pagina-web.jpg?size=1920x0"
+                        alt="Descripción del proyecto 1">
+                    <h3>E-commerce Granja Delicias</h3>
+                    <p>Es una tienda online de venta de productos cárnicos.</p>
+                    <div class="tecnologias">
+                        <p class="html">html</p>
+                        <p class="css">css</p>
+                        <p class="js">JavaScript</p>
+                        <p class="sass">sass</p>
+                    </div>
+                    <a href="#" class="link_proyecto"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="#" class="link_proyecto"><i class="fa-solid fa-link"></i> Link Proyecto</a>
                 </div>
-                <div class="proyecto">
-                    <img src="https://www.godaddy.com/resources/latam/wp-content/uploads/sites/4/pagina-web.jpg?size=1920x0" alt="Descripción del proyecto 1">
-                    <h3>Proyecto 1</h3>
-                    <p>Descripción breve del proyecto 1.</p>
-                    <a href="#">Ver Proyecto</a>
-                </div>
-                <div class="proyecto">
-                    <img src="https://www.godaddy.com/resources/latam/wp-content/uploads/sites/4/pagina-web.jpg?size=1920x0" alt="Descripción del proyecto 1">
-                    <h3>Proyecto 1</h3>
-                    <p>Descripción breve del proyecto 1.</p>
-                    <a href="#">Ver Proyecto</a>
-                </div>
-                
+
+
             </div>
         </section>
         <section id="sobre-mi">

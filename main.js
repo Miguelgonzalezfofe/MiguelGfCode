@@ -24,7 +24,7 @@ window.addEventListener('scroll', () => {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const frases = [" JavaScript ", " React ", " Paginas Web "];
+    const frases = [" JavaScript ", " React.js ", " Web "];
     let i = 0;
     let j = 0;
     let actual = "";
@@ -68,3 +68,46 @@ document.getElementById('toggle-dark-mode').addEventListener('click', function()
     }
 });
 
+document.getElementById('languageSelector').addEventListener('change', changeLanguage);
+
+function changeLanguage() {
+    const language = document.getElementById('languageSelector').value;
+    
+    fetch(`./idioma-${language}.json`)
+    .then(response => response.json())
+    .then(data => {
+        
+        
+        // Cambiar texto en el header
+        document.getElementById('inicio').textContent = data.header.inicio;
+        document.getElementById('proyecto').textContent = data.header.proyectos;
+        document.getElementById('sobre-mi').textContent = data.header.sobre_mi;
+        document.getElementById('contacto').textContent = data.header.contacto;
+        // document.getElementById('toggle-dark-mode').textContent = data.header.toggle_dark_mode;
+        
+        // // Cambiar texto en la sección hero
+        // document.getElementById('hero-title').textContent = data.hero.titulo;
+        // document.getElementById('escribir').textContent = data.hero.subtitulo;
+        // document.getElementById('hero-description').textContent = data.hero.descripcion;
+        // document.getElementById('boton-proyectos').textContent = data.hero.boton_proyectos;
+        
+        // // Cambiar texto en la sección de proyectos
+        // document.getElementById('proyectos-title').textContent = data.proyectos.titulo;
+        // document.getElementById('proyecto1-titulo').textContent = data.proyectos.proyecto1.titulo;
+        // document.getElementById('proyecto1-descripcion').textContent = data.proyectos.proyecto1.descripcion;
+        // document.getElementById('proyecto1-github').textContent = data.proyectos.proyecto1.github;
+        // document.getElementById('proyecto1-link').textContent = data.proyectos.proyecto1.link_proyecto;
+
+        // document.getElementById('proyecto2-titulo').textContent = data.proyectos.proyecto2.titulo;
+        // document.getElementById('proyecto2-descripcion').textContent = data.proyectos.proyecto2.descripcion;
+        // document.getElementById('proyecto2-github').textContent = data.proyectos.proyecto2.github;
+        // document.getElementById('proyecto2-link').textContent = data.proyectos.proyecto2.link_proyecto;
+        
+        // // Cambiar texto en la sección sobre mí
+        // document.getElementById('sobre-mi-title').textContent = data.sobre_mi.titulo;
+    })
+    .catch(error => console.error('Error al cargar el archivo JSON:', error));
+}
+
+// Inicializar con el idioma por defecto
+changeLanguage();
