@@ -38,7 +38,7 @@
 header {
     position: sticky;
     top: 0;
-    max-width: 440px;
+    max-width: 500px;
     width: 100%;
     margin: 10px auto;
     border-radius: 10px;
@@ -107,6 +107,8 @@ nav ul li a.active {
 }
 #languageSelector{
     border: none;
+    background-color: transparent;
+    
 }
 
 
@@ -206,11 +208,10 @@ h3 {
 }
 
 .proyecto .tecnologias {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(20px, 120px));
+    display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
+    margin-bottom: 10px;
 }
 
 .html,
@@ -219,10 +220,11 @@ h3 {
 .sass,
 .react {
     border: 1px solid transparent;
-    border-radius: 15px;
+    border-radius: 5px;
     box-shadow: 0 3px 8px var(--color-gris-medio);
     text-transform: capitalize;
-    font-weight: 800;
+    font-size: 12px;
+    font-weight: 600;
 
 
 }
@@ -259,8 +261,17 @@ h3 {
 
 }
 
-.proyecto .link_proyecto {
+.proyecto .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.proyecto .links .link_proyecto {
     color: var(--color-fondo);
+    width: auto;
+    max-width: 300px;
     text-decoration: none;
     transition: color 0.3s ease;
     border: 1px solid;
@@ -268,7 +279,7 @@ h3 {
     border-radius: 15px;
 }
 
-.proyecto .link_proyecto:hover {
+.proyecto .links .link_proyecto:hover {
     box-shadow: 0px 0px 2px 1px var(--color-fondo);
 
     /* Un tono más claro de morado */
