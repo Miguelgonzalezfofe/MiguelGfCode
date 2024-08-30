@@ -339,6 +339,35 @@ p {
     color: #fff;
 }
 
+
+
+.content_sobreMi{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.content_sobreMi  img{
+
+    width:100%;
+    max-width: 300px;
+    border-radius: 10px;
+    border: 8px solid var(--color-principal);
+    box-shadow: 0px 8px 10px var(--color-principal);
+    
+
+}
+
+.content_sobreMi .text_sobreMi{
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
 button#toggle-dark-mode {
     background: none;
     border: none;
@@ -355,6 +384,7 @@ button#toggle-dark-mode:hover {
 
 #destacar {
     color: var(--color-principal);
+    font-weight: 700;
 
 }
 
@@ -391,6 +421,7 @@ button#toggle-dark-mode:hover {
     h1 {
         font-size: 2rem;
     }
+    
 }
 
 @media (max-width: 390px) {
